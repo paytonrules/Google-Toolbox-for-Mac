@@ -440,6 +440,9 @@ static float _GetSystemVersion(void) {
     returnedVersion = [majorVersion floatValue];
   }
 
+  [[NSFileManager defaultManager] removeItemAtPath:TEMP_FILE
+                                             error:nil];
+
   return returnedVersion;
 }
 
